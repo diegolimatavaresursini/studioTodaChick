@@ -1,0 +1,118 @@
+/* Estilos Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho do elemento */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dca7a7; /* Fundo suave */
+    color: #333;
+    padding-top: 60px; /* **ESSENCIAL** - Adiciona espaço no topo para o navbar fixo */
+    min-height: 100vh;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    color: #007bff; /* Cor de destaque */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Navbar Fixa no Topo */
+nav.nav-menu {
+    position: fixed; /* Fixa o navbar na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Cor de fundo escura */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garante que fique acima de outros conteúdos */
+    padding: 15px 0;
+}
+
+nav.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens de menu */
+}
+
+nav.nav-menu li a {
+    color: white;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav.nav-menu li a:hover {
+    background-color: #007bff; /* Cor de hover */
+    color: white;
+}
+/* Rodapé */
+footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #222; /* Fundo escuro */
+    color: #ccc;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-size: 0.9em;
+    font-weight: normal;
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #4da6ff;
+}
+/* Botão Voltar ao Topo */
+#botao-voltar {
+    position: fixed;
+    bottom: 90px; /* Posição acima do rodapé */
+    right: 20px;
+    z-index: 999;
+}
+
+#botao-voltar a i {
+    font-size: 40px;
+    color: #555; /* Cor do ícone (bi bi-arrow-up-square-fill do Bootstrap Icons) */
+    transition: color 0.3s;
+}
+
+#botao-voltar a:hover i {
+    color: #007bff;
+}
+
+/* Botão WhatsApp Fixo (Flutuante) */
+#botao-whatsapp {
+    position: fixed;
+    bottom: 20px; /* Distância da parte inferior da tela */
+    right: 20px;
+    z-index: 1001; /* Garante que fique acima de todos */
+}
+
+#botao-whatsapp img {
+    width: 60px; /* Tamanho da imagem do WhatsApp */
+    height: 60px;
+    border-radius: 50%; /* Se a imagem for quadrada, faz ela parecer redonda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+#botao-whatsapp a:hover img {
+    transform: scale(1.1); /* Efeito de leve aumento ao passar o mouse */
+}

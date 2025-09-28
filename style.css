@@ -12,6 +12,7 @@ body {
     padding-top: 60px; /* **ESSENCIAL** - Adiciona espaço no topo para o navbar fixo */
     min-height: 100vh;
     position: relative;
+    font-size: 1rem;
 }
 
 h1 {
@@ -116,3 +117,42 @@ footer a:hover {
 #botao-whatsapp a:hover img {
     transform: scale(1.1); /* Efeito de leve aumento ao passar o mouse */
 }
+.section {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Estilo padrão para desktop */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
